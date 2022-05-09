@@ -1,0 +1,59 @@
+# ************************************************************
+# Sequel Ace SQL dump
+# Version 20046
+#
+# https://sequel-ace.com/
+# https://github.com/Sequel-Ace/Sequel-Ace
+#
+# Host: 127.0.0.1 (MySQL 8.0.32)
+# Database: petstore
+# Generation Time: 2022-05-09 10:16:47 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+SET NAMES utf8mb4;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE='NO_AUTO_VALUE_ON_ZERO', SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table pet
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `pet`;
+
+CREATE TABLE `pet` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `category` varchar(128) NOT NULL,
+  `tag` varchar(128) DEFAULT NULL,
+  `status` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+LOCK TABLES `pet` WRITE;
+/*!40000 ALTER TABLE `pet` DISABLE KEYS */;
+
+INSERT INTO `pet` (`id`, `name`, `category`, `tag`, `status`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+	(1,'Donnie','dog','dog',NULL,'2023-09-19 12:25:40',NULL,NULL),
+	(2,'Cattie','cat','cat',NULL,'2023-09-19 12:26:45',NULL,NULL),
+	(3,'Habanero','dog','dot',NULL,'2023-09-19 12:26:45',NULL,NULL);
+
+/*!40000 ALTER TABLE `pet` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
