@@ -8,4 +8,14 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
+
+    //path: app/Controllers/Home.php
+    // ...
+    public function docs()
+    {
+        return view('docs', [
+            'docPath' => base_url('api.yaml?t=' . time()),
+        ]);
+    }
+    // ...
 }
