@@ -1,52 +1,25 @@
-# CodeIgniter 4 Application Starter
+# CI4 Explore - PetStore
 
-## What is CodeIgniter?
+## What is it?
+This is a RESTful API built in CodeIgniter.
+
+The example is try to implement the API that declared as OpenAPI 3.0 (YAML) in the [Swagger Editor](https://editor.swagger.io/#).
 
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+More information about CodeIgniter can be found at the [official site](https://codeigniter.com).
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
-
-The user guide corresponding to the latest version of the framework can be found
+The user guide corresponding to the latest version of the CI framework can be found
 [here](https://codeigniter4.github.io/userguide/).
-
-## Installation & updates
-
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
 
 ## Setup
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Copy `.env.development` to `.env` and tailor for your app, specifically the baseURL and any database settings.
 
-## Important Change with index.php
+## Some Tips
+This is just an illustration of how CI4 and OpenAPI 3.0/Swagger works. It shows my practice during development with these techs. 
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+It is only a self story, not a best practice, though I wanna make it to.
 
 ## Server Requirements
 
@@ -60,3 +33,13 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- [xdebug](https://www.google.com/search?q=xdebug) if you plan to use Xdebug for debugging
+
+## Todo
+There's a vision of this project. If anyone is insteresting please drop me a msg. 
+
+I plan to do the following at least:
+- dockerize it
+- more API implementation towards the YAML
+- make it as a reusable structure and for OpenAPI code generator
+
