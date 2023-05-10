@@ -42,7 +42,8 @@ class Pet extends ResourceController
         $res = $this->model->save($pet);
 
         if ($res) {
-            return $this->respond($this->model->find($this->model->getInsertId()));
+            $pet->id = $this->model->getInsertId();
+            return $this->respond($pet);
         }
 
         return $this->failGeneral('failed to create');

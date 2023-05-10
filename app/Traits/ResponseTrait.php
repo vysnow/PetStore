@@ -5,7 +5,7 @@ use CodeIgniter\API\ResponseTrait as CIResponseTrait;
 
 /**
  * This is rewrite of ResponseTrait from CodeIgniter\API\ResponseTrait
- * @author John <john@xxx.com>
+ * @author John <vysnow@gmail.com>
  * 
  * Provides common, more readable, methods to provide
  * consistent HTTP responses under a variety of common
@@ -19,7 +19,7 @@ trait ResponseTrait
     use CIResponseTrait;
 
    /**
-     * Rewrite fail method by John<john@xxx.com>
+     * Rewrite fail method by John<vysnow@gmail.com>
      * Used for generic failures that no custom methods exist for.
      *
      * @param array|string $errors
